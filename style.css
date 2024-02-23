@@ -1,0 +1,254 @@
+/* Paramètres par default */
+html body {
+    background-image: url(./MonResto/Fond1.jpg);
+    background-size: 100% 180%;
+    background-attachment: fixed;
+}
+
+/* Logo de la Barre de navigation */
+#Logo img{
+    width: 5em;
+    height: 5em;
+    border-radius: 50px;
+}
+
+/* Barre de navigation */
+#navBarre {
+    background-color: transparent;
+    color: white;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 5; /* Met la NavBarre au premier plan */
+    margin-top: -9em;
+}
+
+/* Titre de la Barre de navigation */
+#navTitle {
+    margin-left: 2em;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+/* Element de la liste dans la nav */
+#navBarre ul li{
+    justify-content: center;
+    display: inline-block;
+}
+
+/* Boutons de la navigation */
+.navBtn {
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    width: 10em;
+    height: 3em;
+}
+
+/* Boutons de la navigation quand ils sont survolés*/
+.navBtn:hover{
+    background-color: white;
+    color: black ;
+}
+
+/* Bouton Menu */
+#menuBtn {
+    margin-left: 34em;
+    margin-right: 1.5em;
+}
+
+/* Entéte avec le caroussel et la zone de pub */
+#visitSection {
+    display: flex;
+    margin: 10em auto;
+    align-items: center;
+}
+
+/* Caroussel d'image */
+#carousselSection {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9em;
+    margin-bottom: 9em;
+    width: 35em;
+    height: 25em;
+    border: 1px solid;
+    border-radius: 25px;
+    background-color: black;
+}
+
+/* Images dans le caroussel */
+.carousel-item img {
+    border-radius: 25px;
+    height: 25em;
+}
+
+/* Zones de pubs */
+.pubZone {
+    border: 1px;
+    border-radius: 25px;
+    width: 16em;
+    height: 20em;
+    text-align: center;
+    font-size: large;
+}
+
+/* Titre de la pub de gauche */
+#MétéoAside {
+    background-color: skyblue;
+    opacity: 0.3;
+    font-family: fantasy;
+}
+
+/* Date dans la pub de météo */
+#Date {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+/* Image de la Météo */
+#MétéoAside img {
+    width: 13em;
+    height: 12em;
+}
+
+/* Titre de la pub de gauche */
+#CielixAside {
+    background-color: black;
+    opacity: 0.3;
+    color: red;
+    font-family: fantasy;
+}
+
+/* Différentes div dans la 1ère section */
+#firstSection div{
+    border: 1px solid white;
+    border-radius: 25px;
+    height: 20em;
+    width: 25em;
+    justify-content: center;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4); /* Change la transparence de la div */
+}
+
+.foodDescription {
+    transition:transform .3s ;
+}
+
+.foodDescription:hover {
+    -ms-transform:scale(1.1) ;
+    -webkit-transform:scale(1.1) ;
+    transform:scale(1.1) ;
+}
+
+/* Description des plats */
+.foodDescriptionC {
+    margin-right: 4.37em;
+    margin-left: 4.37em;
+    margin-top: 20px;
+    transition:transform .3s ;
+}
+
+.foodDescriptionC:hover {
+    -ms-transform:scale(1.1) ;
+    -webkit-transform:scale(1.1) ;
+    transform:scale(1.1) ;
+}
+
+/* Element (h3) de la 1ère section */
+#firstSection div h3 {
+    padding: 10px 0;
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: underline; /* Souligne le texte */
+}
+
+/* Paramètres général de la 2ème Section */
+#secondSection {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 7em 30em;
+    padding: 2em;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 5px solid white;
+}
+
+/* Change la couleur du texte de base afficher dans les Input */
+input::placeholder {
+    color: white;
+}
+
+/* Modifie la zone de commande */
+#secondSection input  {
+    font-size: x-large;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Cible le Name Input avec son id */
+#nameInput {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Bouton pour confirmer la commande */
+#commandeBtn {
+    border: 1px white solid;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 7px 15px;
+    font-size: large;
+}
+
+/* Bouton pour confirmer la commande quand il est survolé */
+#commandeBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 15);
+    margin-top: 5em;
+    color: white;
+    font-style: italic;
+}
+
+/* Differentes div dans le footer */
+footer div {
+    display: inline-block;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#source {
+    margin-right: 12.5em;
+    margin-left: 10px;
+}
+/* Div du milieu dans le footer */
+#title-Copyright {
+    text-align: center;
+    margin-right: 20em;
+}
+
+/* Boutons de contacts dans le footer*/
+#meContacter button {
+    border-radius: 25px;
+}
+
+/* Image dans les boutons */
+#meContacter button img {
+    width: 2em;
+    height: 2em;
+    border-radius: 25px;
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link id="icon" rel="icon" href="./MonResto/Logo.jpg">
+</head>
+<body>
+    <!-- Barre de Nav (Logo, Titre, Bouton) -->
+    <nav id="navBarre">
+        <ul>
+            <li id="Logo">
+                <a href="./MonResto/Logo.jpg"><img src="./MonResto/Logo.jpg"></a>
+            </li>
+            <li id="navTitle">
+                <h2>MoMo Restaurent</h2>
+            </li>
+            <li>
+                <button id="menuBtn" class="navBtn">
+                    Menu
+                    <!-- Code JS : Bouton 'Menu' préssé = descend vers la description de Menu -->
+                    <script>
+                        // Attend que la page soit chargée
+                        document.addEventListener('DOMContentLoaded', function () {
+
+                          // Sélection des éléments du DOM
+
+                          const menuBtn = document.getElementById('menuBtn');
+                          const Menu = document.getElementById('firstSection')
+
+                          // Ajout d'un écouteur d'événements pour le clic sur le bouton Menu
+
+                          menuBtn.addEventListener('click', function() {
+                              afficherMenu()
+                          });
+
+                          // Fonction pour descendre vers le Menu
+
+                          function afficherMenu() {
+                            Menu.scrollIntoView({ behavior: "smooth" });
+                          }
+
+                        });
+                    </script>
+                </button>
+            </li>
+            <li>
+                <button id="aProposBtn" class="navBtn">
+                    A propos
+                    <!-- Code JS : Bouton 'A Propos' préssé = descend vers le Footer -->
+                    <script>
+                        // Attend que la page soit chargée
+                        document.addEventListener('DOMContentLoaded', function () {
+
+                        // Sélection des éléments du DOM
+                                                
+                        const FooterBtn = document.getElementById('aProposBtn');
+                        const Footer = document.getElementById('footerSection')
+                                                
+                        // Ajout d'un écouteur d'événements pour le clic sur le bouton Menu
+                                                
+                        FooterBtn.addEventListener('click', function() {
+                            afficherFooter()
+                        });
+                        
+                        // Fonction pour descendre vers le Menu
+                        
+                        function afficherFooter() {
+                          Footer.scrollIntoView({ behavior: "smooth" });
+                        }
+                        
+                        });
+                    </script>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+      <!-- Zone de Pub
+      <section id="visitSection">
+        Zone de pub avec la météo
+        <aside id="MétéoAside" class="pubZone">
+          <h1 id="Météo">
+            Météo
+          </h1>
+          <img src="./Meteo France.png" alt="" srcset="">
+          Zone pour afficher la date
+          <h id="Date">
+            Code JS : Pour afficher la date du jour (Â Finir)
+            <script>
+              document.addEventListener('DOMContentLoaded', function(){
+                
+                function afficherDate() {
+                  let createDate = new Date();
+                  let actualDate = '0' + createDate.getDate() + '/' + '0' + (createDate.getMonth() +1) + '/' + createDate.getFullYear();
+                  let dateZone = document.getElementById('Date');
+                  let actualHour = createDate.getHours() + ':' + createDate.getMinutes() + ':' + createDate.getSeconds();
+                  let dateHours = document.getElementById('dateHour');
+                  
+                  dateHours.textContent = actualHour;
+                  dateZone.textContent = actualDate;
+
+                  setTimeout(afficherDate, 1000);
+                }
+                afficherDate();
+              });              
+            </script>
+          </h><br>
+          <h id="dateHour">
+          </h>
+        </aside>
+        -->
+
+        <!-- Caroussel -->
+        <section id="carousselSection">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./Caroussel/Couscous de Poulet.jpg" title="Couscous de Poulet" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Tajine de Kefta.jpg" title="Tajine de Kefta" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Pastilla au Poulet.jpg" title="Pastilla au Poulet" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Harira.jpg" title="Harira" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Couscous Royal.jpg" title="Couscous Royal" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Rfissa.jpg" title="Rfissa" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Méchoui.jpg" title="Méchoui" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Zaalouk.jpg" title="Zaalouk" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Caroussel/Cornes de Gazelle.jpg" title="Cornes de Gazelles" class="d-block w-100">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </section>
+        <!--<aside id="CielixAside" class="pubZone">
+          <h1 id="Cielix">
+            Cielix
+          </h1>
+        </aside>
+        -->
+        </section>
+
+        <!-- Description de chaque plats (Prix, Ingrédiants) -->
+        <section id="firstSection">
+            <div class="foodDescription">
+              <h3>
+                  ꧁Couscous de Poulet꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                10€ 
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                  <li>Couscous</li>
+                  <li>Poulet</li>
+                  <li>Carottes</li>
+                  <li>Courgettes</li>
+                  <li>Pois chiches</li>
+                  <li>Epices</li>
+              </h>
+            </div>
+            <div class="foodDescriptionC">
+              <h3>
+                  ꧁Tajine de Kefta꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                7€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Viande hachée</li>
+                <li>Oignons</li>
+                <li>Coriandre</li>
+                <li>Persil</li>
+                <li>Epices</li>
+                <li>Oeufs (pour la garniture).</li>
+              </h>
+            </div>
+            <div class="foodDescription">
+              <h3>
+                  ꧁Pastilla au Poulet꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                12€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Poulet</li>
+                <li>Amandes</li>
+                <li>Oeufs</li>
+                <li>Feuilles de brick</li>
+                <li>Sucre</li>
+                <li>Cannelle</li>
+              </h>
+            </div>
+            <div class="foodDescription">
+              <h3>
+                  ꧁Harira꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                5€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Pois chiches</li>
+                <li>Lentilles</li>
+                <li>Tomates</li>
+                <li>Coriandre</li>
+                <li>Persil</li>
+                <li>Viande</li>
+              </h>
+            </div>
+            <div class="foodDescriptionC">
+              <h3>
+                  ꧁Couscous Royal꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                15€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Couscous</li>
+                <li>Agneau, Poulet</li>
+                <li>Carottes</li>
+                <li>Navets</li>
+                <li>Pois chiches</li>
+                <li>Oignons</li>
+              </h>
+            </div>
+            <div class="foodDescription">
+              <h3>
+                  ꧁Rfissa꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                8€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Poulet</li>
+                <li>Lentilles</li>
+                <li>Oignons</li>
+                <li>Fenugrec</li>
+                <li>Epices</li>
+                <li>Msemen (pain marocain)</li>
+              </h>
+            </div>
+            <div class="foodDescription">
+              <h3>
+                  ꧁Méchoui꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                18€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Agneau</li>
+                <li>Epices</li>
+                <li>Herbes aromatiques</li>
+                <li>Navets</li>
+                <li>Carottes</li>
+                <li>Oignons</li>
+              </h>
+            </div>
+            <div class="foodDescriptionC">
+              <h3>
+                  ꧁Zaalouk꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                4€ (peut être servi comme accompagnement)
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Aubergines</li>
+                <li>Tomates</li>
+                <li>Ail</li>
+                <li>Coriandre</li>
+                <li>Huile d'olive</li>
+                <li>Epices</li>
+              </h>
+            </div>
+            <div class="foodDescription">
+              <h3>
+                  ꧁Cornes de Gazelle꧂
+              </h3>
+              <h4>
+                Prix:
+              </h4>
+              <h>
+                6€
+              </h>
+              <h4>
+                Ingrédients:
+              </h4>
+              <h>
+                <li>Amandes moulues</li>
+                <li>Sucre glace</li>
+                <li>Cannelle</li>
+                <li>Eau de fleur d'oranger</li>
+                <li>Pâte feuilletée</li>
+                <li>Sucre glace (pour saupoudrer)</li>
+              </h>
+            </div>   
+        </section>
+        <!-- Zone de Commande -->
+        <section id="secondSection">
+            <div id="inputDiv">
+                <input type="text" id="commandeInput" placeholder="Taper votre Commande"><br>
+                <input type="text" id="nameInput" placeholder="Taper votre Prénom"><br>
+                <button id="commandeBtn">
+                    Commander
+                    <!-- Code JS : Bouton 'Commander' préssé = ajout de la commande à la liste -->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                                                  
+                        // Sélection des éléments du DOM
+                                                  
+                        const commandeInput = document.getElementById('commandeInput');
+                        const nameInput = document.getElementById('nameInput');
+                        const commandeBtn = document.getElementById('commandeBtn');                   
+                        // Ajout d'un écouteur d'événements pour le clic sur le bouton Commander
+                                                  
+                        commandeBtn.addEventListener('click', function() {
+                            afficherCommande();
+                        });
+                        
+                        // Fonction pour ajouter la commande à ma liste, puis l'afficher
+                        
+                        function afficherCommande() {
+                            /* let list = document.createElement('UL'); */
+                            let listElement = document.createElement('LI');
+
+                            listElement.textContent = "Commande de " + nameInput.value + " : " + commandeInput.value;
+                            
+                            /* list.appendChild(listElement); */
+                            
+                            if ((nameInput.value != '') && (commandeInput.value != '')) {
+                              console.log(listElement);
+                              alert("Votre commande à bien était confirmée, Merci " + nameInput.value + ".🎔");
+                            }
+                            else {
+                              alert("Veulliez remplir votre commande ET votre nom, S'il vous plait.");
+                            }
+                            // Reset le champ de texte
+                            commandeInput.value = '';
+                            nameInput.value = '';
+                        }
+                        
+                        });
+                    </script>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Bas de page avec quelques Infos -->
+    <footer id="footerSection">
+      <div id="source">
+        <h>
+          Background By <a href="https://dream.ai/listing/3f592be5-3fcb-4bed-ab82-1c7bc83e125b">DreamAI</a> <br>
+          Caroussell By <a href="https://getbootstrap.com/">Bootstrap</a>
+        </h>
+      </div>
+      <div id="title-Copyright">
+        <h1>
+          MoMo Restaurent
+        </h1>
+        <h>
+          Copyright © Tous droits réservés.
+        </h>
+      </div>
+      <div  id="meContacter">
+        <button>
+            <img src="./Me_Contacter/Twitter_Icon.webp">
+        </button>
+        <button>
+            <img src="./Me_Contacter/Linkedin_Icon.jpg">
+        </button><br>
+        <button>
+            <img src="./Me_Contacter/Instagram_Icon.webp">
+        </button>
+        <button>
+            <img src="./Me_Contacter/Discord_Icon.webp">
+        </button>
+      </div>    
+    </footer>
+</body>
+</html>
